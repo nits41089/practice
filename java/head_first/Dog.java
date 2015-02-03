@@ -1,17 +1,30 @@
 class Dog {
 	int size;
-	String breed;
 	String name;
 
 	void bark(){
-		System.out.println("Ruff! Ruff!");
+		if(size > 60){
+			System.out.println("Woof! Woof!");
+		} else if(size > 14){
+			System.out.println("Ruff! Ruff!");
+		} else {
+			System.out.println("Yip! Yip!");
+		}
 	}
 }
 
 class DogTestDrive{
 	public static void main (String[] args){
-		Dog d = new Dog(); // creating a Dog object
-		d.size = 40;       // using the dot operator to set the size of the Dog
-		d.bark();          // calling its bark() method
+		Dog one = new Dog(); // creating a Dog object
+		one.size = 70;       // using the dot operator to set the size of the Dog
+		Dog two = new Dog();
+		two.size = 8;
+		
+		Dog three = new Dog();
+		three.size = 35;
+		
+		one.bark();          // calling its bark() method
+		two.bark();
+		three.bark();
 	}
 }
